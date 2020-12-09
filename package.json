@@ -2,12 +2,7 @@
   "name": "wheater-app",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
-  "dependencies": {
-    "dotenv": "^8.2.0",
-    "request": "^2.88.2"
-  },
-  "devDependencies": {},
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,10 +10,14 @@
     "type": "git",
     "url": "git+https://github.com/Edenik/WheaterApp-Node.js.git"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Edenik/WheaterApp-Node.js/issues"
   },
-  "homepage": "https://github.com/Edenik/WheaterApp-Node.js#readme"
+  "homepage": "https://github.com/Edenik/WheaterApp-Node.js#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
