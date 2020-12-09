@@ -1,6 +1,7 @@
 const path = require('path')
 const express = require('express')
 const hbs = require('hbs')
+const { title } = require('process')
 
 const app = express()
 
@@ -41,6 +42,22 @@ app.get('/help', (req, res) => {
 
 app.get('/weather', (req, res) => {
     res.send({ forecast: 'it is raining', location: 'Israel' })
+})
+
+app.get('/help/*', (req,res) => {
+    res.render('404', {
+        error:'Help article not found',
+        name:"Eden Nahum",
+        title:'404'
+    })
+})
+
+app.get('*', (req,res)=> {
+    res.render('404', {
+        error:'Page not found',
+        name:"Eden Nahum",
+        title:'404'
+    })
 })
 
 app.listen(3000, () => console.log('Server is running on port 3000'))
