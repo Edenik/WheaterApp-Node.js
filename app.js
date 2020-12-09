@@ -4,15 +4,22 @@ const forecast = require('./services/forecast')
 
 
 
+const address= process.argv[2]
 
 
-
-forecast(34.78254, 32.088545, (err, data) => {
-    console.log('Error:', err)
-    console.log('Data:', data)
+if(!address){
+    console.log('Please provide an address')
+} else {
+    geocode(address, (error, data) => {
+    if (error) {
+        return console.log(error)
+    }
+    forecast(data.latitude, data.longitude, (error, forecastData) => {
+        if (error) {
+            return console.log(error)
+        }
+        console.log(data.location)
+        console.log(forecastData)
+    })
 })
-
-geocode('Tel-Aviv', (err, data) => {
-    console.log('Error:', err)
-    console.log('Data:', data)
-})
+}
