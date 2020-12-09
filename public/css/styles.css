@@ -1,0 +1,10 @@
+h1{
+    color: blue;
+}
+
+.circleImage{
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important;
+    border-radius: 50%!important;
+    height: 150px;
+    width: 150px;
+}
